@@ -2,7 +2,7 @@ class Owner
   attr_accessor :pets, :name
   attr_reader :species
   
-  OWNERS = []
+  @@all = []
   
   def initialize(pets) 
     @pets = {fishes: [], cats: [], dogs: []}
@@ -12,7 +12,7 @@ class Owner
   end 
   
   def self.all 
-    OWNERS 
+    @@all 
   end 
   
   def self.count 
@@ -74,7 +74,7 @@ class Owner
   end 
   
   def self.reset_all 
-    OWNERS.clear
+    @@all.clear
   end 
   
 end
